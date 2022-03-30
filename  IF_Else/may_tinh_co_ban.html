@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 40%
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        th {
+            border: 1px solid black;
+            text-align: right
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="4"><p id="display"></p></th>
+
+    </tr>
+    <tr>
+        <td>
+            <button onclick="key('1')">1</button>
+        </td>
+        <td>
+            <button onclick="key('2')">2</button>
+        </td>
+        <td>
+            <button onclick="key('3')">3</button>
+        </td>
+        <td>
+            <button onclick="key('+')">+</button>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+            <button onclick="key('4')">4</button>
+        </td>
+        <td>
+            <button onclick="key('5')">5</button>
+        </td>
+        <td>
+            <button onclick="key('6')">6</button>
+        </td>
+        <td>
+            <button onclick="key('-')">-</button>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <button onclick="key('7')">7</button>
+        </td>
+        <td>
+            <button onclick="key('8')">8</button>
+        </td>
+        <td>
+            <button onclick="key('9')">9</button>
+        </td>
+        <td>
+            <button onclick="key('*')">*</button>
+        </td>
+
+
+    <tr>
+        <td>
+            <button onclick="test()">M</button>
+        </td>
+        <td>
+            <button onclick="key('0')">0</button>
+        </td>
+        <td>
+            <button onclick="result()">=</button>
+        </td>
+        <td>
+            <button onclick="key('/')">/</button>
+        </td>
+
+    </tr>
+    <script>
+        function key(a) { //là chức năng thực hiện lệnh onclick ở trên
+            document.getElementById("display").innerHTML += a
+        }
+
+        function result() {// là chức năng thực hiện lệnh tính toán ở trên
+            let result = eval(document.getElementById("display").innerText);// eval là tổng hợp các phép tính toán có thể
+            document.getElementById("display").innerHTML = result;//sau đó hiển thị lên thành màn hình display chính là kết quả mình muốn
+        }
+
+        function test() {
+            // console.log("abc")
+            // let clear= "";
+            document.getElementById("display").innerHTML = "";
+            // console.log(document.getElementById("display").innerHTML);
+            // console.log(clear);
+
+        }
+    </script>
+
+
+</table>
+</body>
+</html>

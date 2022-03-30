@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let username = prompt("Nhap ID cua ban")
+    if (username === "Admin") {//chú ý tất cả dấu sau if đều để 3 dấu =
+        let passworld = prompt("Nhap mat khau")
+        if (passworld === "TheMaster") {
+            alert("Welcome")
+        } else if (passworld === "null") {
+            alert("Canceled")
+        } else alert("Wrong password")
+    } else if (username === "null") {
+        alert("canceld")
+    } else alert("I dont know you")
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="suki" src="suki.jpg"; style="position: absolute ; width: 300px; top: 100px; left: 200px "  >
+</body>
+<script>
+    window.addEventListener("keydown", moveimg)
+    function moveimg(abc) {
+        let left = document.getElementById("suki").style.left;
+        let top = document.getElementById("suki").style.top;
+        let C;
+        let D;
+
+    switch (abc.key) {
+        case "w":
+            C = parseInt(top) - 10;
+            break;
+        case "s":
+            C = parseInt(top) + 10;
+            break;
+        case "a"  :
+            D = parseInt(left) - 10;
+            break;
+        case "d":
+            D = parseInt(left) + 10;
+            break
+    }
+        document.getElementById("suki").style.left = D +"px"
+        document.getElementById("suki").style.top = C +"px"
+
+    }
+
+
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="messi" src="12.jpg" style="position: absolute; top: 100px; left: 200px">
+<script>
+    window.addEventListener("keydown", moveball)//"keydown"an cac nut ban phim xuong, can them co moveball la de may tinh biet minh muon di chuyen qua bong.
+    //lang nghe su kien
+    function moveball(azx) {
+        let left = document.getElementById("messi").style.left;
+        let top = document.getElementById("messi").style.top;
+        let A;
+        let B;
+        switch (azx.key) {
+            case "d":
+                A = parseInt(left) + 10;//parseInt la chuyen thanh so thap phan de may tinh hieu
+                break;
+            case "a":
+                A = parseInt(left) - 10;
+                break;
+            case "w":
+                B = parseInt(top) - 10;
+                break;
+            case "s":
+                B= parseInt(top) + 10;
+                break
+        }
+        document.getElementById("messi").style.left = A +"px"
+        document.getElementById("messi").style.top = B +"px"
+    }
+
+
+</script>
+</body>
+</html>

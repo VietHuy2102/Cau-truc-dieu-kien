@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="position: absolute; top: 220px; left: 270px">Do you love me?</h1>
+<input type="button" value="Yes" onclick="ofcouse()" style="position: absolute ; top: 300px; left: 300px">
+<input id="No-el" type="button" value="No" onmouseover="nothank()" style="position: absolute ; top: 300px; left: 400px">
+<script>
+    function ofcouse(){
+        alert("tuyet voi")
+    }
+    function nothank() {
+        let x = Math.random()*100;
+        let y = Math.random()*100;
+
+        document.getElementById("No-el").style.top = x+"%"
+        document.getElementById("No-el").style.left = y+"%"
+    }
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>
